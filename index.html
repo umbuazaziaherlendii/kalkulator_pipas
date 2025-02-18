@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Jejak Karbon</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Kalkulator Jejak Karbon</h1>
+        
+        <!-- Input Form -->
+        <label for="alat">Pilih Alat Elektronik:</label>
+        <select id="alat">
+            <option value="Laptop">Laptop</option>
+            <option value="Lampu LED">Lampu LED</option>
+            <option value="Kipas Angin">Kipas Angin</option>
+            <option value="AC">AC</option>
+            <option value="Handphone">Handphone</option>
+            <option value="Televisi">Televisi</option>
+            <option value="Kulkas">Kulkas</option>
+        </select>
+
+        <label for="jumlah">Jumlah Alat:</label>
+        <input type="number" id="jumlah" min="1" placeholder="Masukkan jumlah alat">
+
+        <label for="jam">Jam Penggunaan per Hari:</label>
+        <input type="number" id="jam" min="1" placeholder="Masukkan jam penggunaan per hari">
+
+        <label for="hari">Jumlah Hari Penggunaan:</label>
+        <input type="number" id="hari" min="1" placeholder="Masukkan jumlah hari penggunaan">
+
+        <button onclick="hitungJejakKarbon()">Hitung Jejak Karbon</button>
+
+        <div class="result" id="hasil"></div>
+
+        <h3>Riwayat Perhitungan:</h3>
+        <ul id="riwayat"></ul>
+
+        <button id="hapusRiwayat" onclick="hapusRiwayat()">Hapus Riwayat</button>
+
+        <!-- Total Jejak Karbon -->
+        <h3>Total Jejak Karbon:</h3>
+        <div id="totalJejakKarbon" class="result"></div>
+    </div>
+
+    <script src="kal.js"></script>
+
+</body>
+</html>
